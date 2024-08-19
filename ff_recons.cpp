@@ -1,4 +1,4 @@
-//#include "ff_recons.h"
+/*
 #include <iostream>
 #include <vector>
 
@@ -42,7 +42,7 @@ private:
     }
 };
 
-std::vector<int> lagrangeInterpolation(const std::vector<int>& x, const std::vector<int>& y, const FiniteField& field) {
+std::vector<int> lagrangeInterpolation1(const std::vector<int>& x, const std::vector<int>& y, const FiniteField& field) {
     int n = x.size();
     std::vector<int> result(n, 0);
 
@@ -69,21 +69,14 @@ int main() {
     std::vector<int> x = {1, 2, 3};
     std::vector<int> y = {6, 5, 1};
 
-    std::vector<int> polynomial = lagrangeInterpolation(x, y, field);
+    std::vector<int> polynomial = lagrangeInterpolation1(x, y, field);
 
-    std::cout << "Reconstructed polynomial: ";
-    for (int i = 0; i < polynomial.size(); ++i) {
-        if (i > 0 && polynomial[i] != 0) {
-            std::cout << " + ";
-        }
-        if (polynomial[i] != 0) {
-            std::cout << polynomial[i];
-            if (i > 0) {
-                std::cout << "x^" << i;
-            }
-        }
+    std::cout << "Reconstructed polynomial coefficients: ";
+    for (int coeff : polynomial) {
+        std::cout << coeff << " ";
     }
     std::cout << std::endl;
 
     return 0;
 }
+*/
